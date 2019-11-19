@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Temel.master.cs" Inherits="Temel" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>YEMEKHANE</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+      
+
+
+
+    </asp:ContentPlaceHolder>
+</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<body style="background-color:#FDC3EE">
+    <form id="form1" runat="server">
+
+        <div style="height: 120px;background-image:url(baslikresmi.jpg)"></div>
+       
+        <div style="height:7px"></div>
+
+        <nav class="navbar navbar-inverse" style="background-color:#F5EED8">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="Anasayfa.aspx" style="color:firebrick"><b>YEMEKHANE</b></a>
+            </div>
+            <ul class="nav navbar-nav" >
+             
+              <li style="margin-left:58px">&nbsp;</li>
+               
+              <li><a href="Anasayfa.aspx" style="color:firebrick"><b>ANASAYFA</b></a></li>
+              <li><a href="TarifEkle.aspx" style="color:firebrick"><b>TARİF EKLEME</b></a></li>
+                <li><a href="Hakkimizda.aspx" style="color:firebrick"><b>HAKKIMIZDA</b></a></li>
+                
+                
+            </ul>
+            <ul id="yeni" class="nav navbar-nav navbar-right">
+
+               <li >
+                  <%--><asp:HyperLink style="color:firebrick" ID="HyperLink2" runat="server" NavigateUrl="~/KayitOl.aspx">
+                      <span class="glyphicon glyphicon-user"></span> <b>
+
+                  <asp:Label ID="Label1" runat="server" Text="Kayıt Ol"></asp:Label>
+
+                                                                                                                 </b>
+                  </asp:HyperLink><--%>
+
+                   
+                    <asp:LinkButton ID="LinkButton_username" runat="server" style="color:firebrick;font-weight:bold" Text="" Enabled="False">
+
+           
+
+                        
+
+
+                     </asp:LinkButton>
+                 
+                  
+                  
+                  </li>
+
+
+
+              <li >
+                  <%--><asp:HyperLink style="color:firebrick" ID="HyperLink2" runat="server" NavigateUrl="~/KayitOl.aspx">
+                      <span class="glyphicon glyphicon-user"></span> <b>
+
+                  <asp:Label ID="Label1" runat="server" Text="Kayıt Ol"></asp:Label>
+
+                                                                                                                 </b>
+                  </asp:HyperLink><--%>
+
+                  <asp:LinkButton ID="LinkButton_signup" runat="server" style="color:firebrick" OnClick="LinkButton_signup_Click" PostBackUrl="~/KayitOl.aspx">
+
+                      <span class="glyphicon glyphicon-user"></span>
+
+                      <b>
+                          <asp:Label ID="Label_signup" runat="server" Text="Kayıt Ol"></asp:Label>
+                      </b>
+
+                  </asp:LinkButton>
+
+
+
+                  
+                  
+                  </li>
+              <li >
+                  <%--><asp:HyperLink style="color:firebrick" ID="HyperLink1" runat="server" NavigateUrl="~/Giris.aspx"><span class="glyphicon glyphicon-log-in"></span> <b>
+                  
+                  <asp:Label ID="Label3" runat="server" Text="Giriş Yap"></asp:Label>
+                  
+                 </b></asp:HyperLink><--%>
+
+                 
+                  <asp:LinkButton ID="LinkButton_signin" runat="server" style="color:firebrick" OnClick="LinkButton_signin_Click" PostBackUrl="~/Giris.aspx">
+
+
+                       <span class="glyphicon glyphicon-user"></span>
+
+                      <b>
+                          <asp:Label ID="Label_signin" runat="server" Text="Giriş Yap"></asp:Label>
+                      </b>
+
+                  </asp:LinkButton>
+
+                 
+              </li>
+
+                 <li >
+                  <%--><asp:HyperLink style="color:firebrick" ID="HyperLink1" runat="server" NavigateUrl="~/Giris.aspx"><span class="glyphicon glyphicon-log-in"></span> <b>
+                  
+                  <asp:Label ID="Label3" runat="server" Text="Giriş Yap"></asp:Label>
+                  
+                 </b></asp:HyperLink><--%>
+
+                     <asp:LinkButton ID="LinkButton_logout" runat="server" style="color:firebrick" OnClick="LinkButton_logout_Click1">
+
+           
+
+                        <b>ÇIKIŞ YAP</b>
+
+
+                     </asp:LinkButton>
+
+                 
+              </li>
+
+
+
+
+            </ul>
+          </div>
+        </nav>
+
+
+        <div>
+
+            <div class="list-group" style="height:400px;width:200px;float:left">
+                  <p style="text-align:left;font-size:medium;color:firebrick"><b>&nbsp;&nbsp;&nbsp;TARİFLER</b></p>
+                  <a href="CorbaTarifleri.aspx" class="list-group-item" style="color:firebrick;background-color:#F5EED8"><b>ÇORBALAR</b></a>
+                  <a href="AraSicakTarifleri.aspx" class="list-group-item" style="color:firebrick;background-color:#F5EED8"><b>ARA SICAKLAR</b></a>
+                  <a href="AnaYemekTarifleri.aspx" class="list-group-item" style="color:firebrick;background-color:#F5EED8"><b>ANA YEMEKLER</b></a>
+                  <a href="SalataTarifleri.aspx" class="list-group-item" style="color:firebrick;background-color:#F5EED8"><b>SALATALAR</b></a>
+                  <a href="TatliTarifleri.aspx" class="list-group-item" style="color:firebrick;background-color:#F5EED8"><b>TATLILAR</b></a>
+            </div>
+
+            <div style="margin-left:220px;width:1146px; height:400px">
+
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+
+
+                 </asp:ContentPlaceHolder>
+
+
+
+            </div>
+                  
+
+
+            </div>
+
+        
+            
+            <div style="height:20px"></div>
+        
+        <div style="height:38px;background-color:#F5EED8"><p style="text-align:center;color:firebrick"><b>©2019 - Siteye kayıt olarak tarif ekleyebilir, puan verebilirsiniz</b></p></div>
+                
+
+        
+
+
+            
+
+
+
+
+
+       
+            
+
+     
+
+
+
+    </form>
+</body>
+</html>
